@@ -28,7 +28,7 @@ def has_orig(bac_file, orig_files):
     orig = [f for f in orig_files if cand_name in f]
 
     if len(orig) == 1:
-        print('Found candidate for ' + cand_name)
+        print('Found candidate for ' + bac_file)
     else:
         raise Exception('Found multiple candidates') #This should not be possible to happen
 
