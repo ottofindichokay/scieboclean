@@ -9,6 +9,8 @@ Sciebo.
 Input argument: path of the top level directory
 """
 def main():
+    logging.basicConfig(level=logging.DEBUG)
+
     if len(sys.argv) == 1:
         sciebo_dir = "D:\\sciebo\\"
     else:
@@ -41,9 +43,9 @@ def clean_directory(path, dirs, files):
         try:
             if has_orig(f, orig_files):
                 if matches_orig(path, f):
-                    print(f + ": files match")
+                    logging.debug("Files match for " + f)
                 else:
-                    print(f + ": no match")
+                    logging.info("No match for " + f)
             else:
                 logging.info("No orig file found for: " + f)
         except ValueError:
