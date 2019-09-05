@@ -17,7 +17,7 @@ def main():
         sciebo_dir = sys.argv[1]
     
     for dirpath, dirs, filenames in os.walk(sciebo_dir):
-        clean_directory(dirpath, dirs, filenames)
+        clean_directory(dirpath, filenames)
 
 """
 Checks if the files in the directory which match the pattern of a sciebo backup
@@ -26,10 +26,9 @@ If this _clean_ file exists it will be deleted.
 
 Arguments:
 path: path of the directory to be cleaned
-dirs: TODO remove
 files: files in the directory
 """
-def clean_directory(path, dirs, files):
+def clean_directory(path, files):
     backup_files = []
     orig_files = []
 
