@@ -43,7 +43,7 @@ def has_orig(bac_file, orig_files):
     return len(orig) > 0
 
 def orig_name(bac_file):
-        return bac_file[1:-6]
+        return re.split(r'.~[0-9a-fA-F]{0,4}', bac_file[1:])[0]
     
 def matches_orig(dir, bac_file):
     bac_cand = os.path.join(dir, bac_file)
