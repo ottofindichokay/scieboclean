@@ -12,7 +12,7 @@ def main():
     if len(sys.argv) == 1:
         sciebo_dir = "D:\\sciebo\\"
     else:
-        sciebo_dir = sys.argv[2]
+        sciebo_dir = sys.argv[1]
     
     for dirpath, dirs, filenames in os.walk(sciebo_dir):
         clean_directory(dirpath, dirs, filenames)
