@@ -15,7 +15,7 @@ def clean_directory(path, dirs, files):
     orig_files = []
 
     for f in files:
-        if re.match(r'.*.~', f):
+        if re.match(r'.*.~[0-9a-fA-F]{0,4}', f):
             backup_files.append(f);
         else:
             orig_files.append(f);
