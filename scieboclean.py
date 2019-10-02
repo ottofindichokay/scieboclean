@@ -9,8 +9,7 @@ Function that actually removes the file
 """
 def really_remove(dirpath, file):
     full_path = os.path.join(dirpath, file)
-    # os.remove(full_path)
-    print("would delete: " + full_path)
+    os.remove(full_path)
 
 """
 Pseudo-delete function to be used for dryruns
